@@ -1,12 +1,21 @@
-let name = "Yasin";
-let surname = "Yıldız";
-let age = 24;
-let city = "Kocaeli";
+let courseName = "Komple Uygulamalı Web Geliştirme Eğitimi.";
 
-let retired = (65 - age > 0) ? `"Emekliliğe ${65-age} yılım kaldı."` + (65-age) : "Emekliyim.";
+let result;
 
-let message = `Benim adım ${name} soyadım ${surname} yaşım : ${age} ${city}'de yaşıyorum.${retired}`;
+result = courseName.toLowerCase();
+result = courseName.toUpperCase();
+result = courseName.length;
+result = courseName[0];
+result = courseName.slice(0,6);
+result = courseName.substring(0,6);
 
+result = courseName.replace("Komple","Pratik");
+result = courseName.trim();
+result = courseName.trimEnd();
+result = courseName.trimStart();
 
+result = courseName.indexOf("Komple");
+result = courseName.split(" ");
+result = courseName.split(" ")[0];
 
-console.log(message)
+console.log(result)
