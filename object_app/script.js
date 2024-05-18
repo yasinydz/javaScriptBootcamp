@@ -1,26 +1,55 @@
-const user = [
-    {
-        "name" : "Yasin",
-        "lastname" : "Yıldız",
-        "age" : 2000,
-        "adress" : {
-            "city" : "Kocaeli",
-            "county" : "Başiskele"
+let siparis_1 = {
+    "siparis_id": 101,
+    "siparis_tarihi": "30.12.2022",
+    "odeme_sekli": "kredi kartı",
+    "kargo_adresi": {
+        "mahalle": "yahya kaptan",
+        "ilce": "izmit",
+        "sehir": "kocaeli"
+    },
+    "urunler": [
+        {
+            "urun_id": 5,
+            "urun_adi": "IPhone 13 Pro",
+            "urun_url": "http://abc.com/iphone-13-pro",
+            "urun_fiyat": 22000
         },
-        "hobbies" : [
-            "kitap okumak",
-            "fitness"
-        ]
-    }
-];
+        {
+            "urun_id": 6,
+            "urun_adi": "IPhone 13 Pro Max",
+            "urun_url": "http://abc.com/iphone-13-pro-max",
+            "urun_fiyat": 25000
+        }
+    ]
+};
 
-let example = user[0].name;
-console.log(example)
+let siparis_2 = {
+    "siparis_id": 102,
+    "siparis_tarihi": "30.12.2022",
+    "odeme_sekli": "kredi kartı",
+    "kargo_adresi": {
+        "mahalle": "yahya kaptan",
+        "ilce": "izmit",
+        "sehir": "kocaeli"
+    },
+    "urunler": [
+        {
+            "urun_id": 6,
+            "urun_adi": "IPhone 13 Pro Max",
+            "urun_url": "http://abc.com/iphone-13-pro-max",
+            "urun_fiyat": 25000
+        }
+    ]
+};
 
-for (const userInfo of user) {
-    const userFullName = userInfo.name + " " + userInfo.lastname;
-    const age = new Date().getFullYear() - userInfo.age;
-    const userAdress = userInfo.adress.city + "/" + userInfo.adress.county;
-    const hobbies1 = userInfo.hobbies[0];
-    console.log(`Kullanıcı ismi: ${userFullName} | Yaşı: ${age} | Adres: ${userAdress} | Hobbiler : ${hobbies1}`);
-}
+let siparis1_toplam = (siparis_1.urunler[0].urun_fiyat + siparis_1.urunler[1].urun_fiyat) * 1.18;
+let siparis2_toplam = (siparis_1.urunler[0].urun_fiyat) * 1.18;
+
+let toplam_siparis = siparis1_toplam + siparis2_toplam;
+
+console.log("sipariş 1: " + siparis1_toplam);
+console.log("sipariş 2: " + siparis2_toplam);
+
+console.log("toplam ödenen miktar: " , toplam_siparis);
+
+let siparisler = [siparis_1, siparis_2];
