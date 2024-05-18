@@ -23,19 +23,19 @@ console.log(fruits);
 
 const students = [
     {
-        name : "Yiğit Bilgi",
-        birthday : 2010,
-        note : (70+80+80)
+        "name" : "Yiğit Bilgi",
+        "birthday" : 2010,
+        "note" : (70+80+80)
     },
     {
-        name : "Ada Bilgi",
-        birthday : 2012,
+        "name" : "Ada Bilgi",
+        "birthday" : 2012,
         note : (80+80+90)
     },
     {
-        name : "Ahmet Turan",
-        birthday : 2009,
-        note : (60+60+70)
+        "name" : "Ahmet Turan",
+        "birthday" : 2009,
+        "note" : (60+60+70)
     }
 ]
 for (const student of students) {
